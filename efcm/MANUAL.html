@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Escape From Castle Matsumoto - Player's Manual</title>
+    <meta property="og:title" content="Escape From Castle Matsumoto Manual" />
+    <meta property="og:description" content="Booklet-style manual for the game Escape From Castle Matsumoto" />
+    <meta property="og:url" content="https://mausimus.github.io/efcm/MANUAL.html" />
+    <meta property="og:image" content="manual/cover.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -11,11 +16,35 @@
 
     <style type="text/css">
 
+        /* To generate .pdf print from Chrome using A5 Paper, Landscape Layout, None Margins and 75% Scale */
         @media print {
-            .break
-            {
+
+            @page {
+                @bottom-right {
+                    line-height: 16px;
+                    font-size: 10px;
+                    vertical-align: bottom;
+                    margin-right: 4px;
+                    content: counter(page);
+                }
+            }
+
+            .break {
                 page-break-before: always;
                 height: 20px;
+            }
+
+            .spacer {
+            }
+        }
+
+        @media screen {
+            .break {
+                display: none;
+            }
+
+            .spacer {
+                display: none;
             }
         }
 
@@ -42,6 +71,7 @@
             color: white;
             font-family: sans-serif;
             line-height: 24px;
+            font-size: 16px;
         }
 
         table {
@@ -120,6 +150,11 @@
             padding-bottom: 0;
             margin: 0;
         }
+
+        .top-link {
+            padding: 0 20px 0 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -131,12 +166,17 @@
 
         <tr>
             <td colspan="2" style="text-align: center;">
+                <div class="spacer" style="height: 150px;"></div>
                 <img src="manual/logo.jpg" />
                 <h1 style="padding: 20px;">Escape From Castle Matsumoto</h1>
                 <h2 style="padding-bottom: 25px;">Player's Manual</h2>
+                <a class="top-link" href="https://store.steampowered.com/app/2490030" target="_blank">Steam</a>
+                <a class="top-link" href="https://mausimus.itch.io/efcm" target="_blank">itch.io</a>
                 <p></p>
             </td>
         </tr>
+
+        <tr class="print-only"><td><div class="break"></div></td></tr>
 
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
@@ -152,7 +192,7 @@
                 </p>
             </td>
         </tr>
-
+        <tr class="spacer"><td style="height: 200px;"></td></tr>
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title">
@@ -171,6 +211,8 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title">
@@ -178,10 +220,11 @@
             </td>
             <td class="top-margin-s">
                 <p>
-                    You can play the game using a Keyboard or a Controller. Keyboard controls have two layouts which
-                    can be used when playing against another player over split-screen with a single keyboard.<br />
-                    During single-player or network games you can use any of the controls (Keyboard A or B, any Gamepad).
+                    You can play the game using a Keyboard or a Controller.<br />
+                    Keyboard has two layouts for playing against another player over split-screen using a single keyboard.<br />
+                    During single-player or network games you can use <b>ANY OF THE CONTROLS</b> (Keyboard A or B, any Gamepad).
                 </p>
+                <p></p>
                 <table class="inner allcenter">
                     <colgroup>
                         <col style="width: 25%;" />
@@ -288,6 +331,8 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title"><p>Actions</p></td>
@@ -297,8 +342,9 @@
                     Action button performs the <b>DEFAULT ACTION</b> shown on screen which depends on what object is in front of you: if you are standing by a Door or Furniture it will show a possible interaction with them.
                     If you are holding an Item or a tool, an appropriate action will show.
                 </p><p>
-                    If no <b>DEFAULT ACTION</b> is shown on screen, Action button enters <b>INVENTORY</b>. However, you cannot use <b>INVENTORY</b> while you are holding an <b>ITEM</b>.
+                    If no <b>DEFAULT ACTION</b> is shown on screen, Action button enters <b>INVENTORY</b> (this can be disabled in Options by toggling off Single Button Mode).
                 </p>
+                <p></p>
                 <table class="inner allcenter">
                     <colgroup>
                         <col style="width: 25%;" />
@@ -347,6 +393,8 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title">
@@ -367,7 +415,6 @@
                     <li>You can only carry <b>ONE ITEM &nbsp; <img src="manual/item.png" style="margin-bottom: -5px;" /> &nbsp; AT A TIME</b>, unless you have the <b>BAG</b> &nbsp; <img src="manual/bag.png" style="margin-bottom: -5px;" /></li>
                     <li>Items are <b>HIDDEN</b> in Furniture around the Castle. Approach Furniture and press Action to <b>SEARCH</b> it. If there was an Item hidden inside, you will pick it up.</li>
                     <li>If you are holding an Item, you can hide it in Furniture to retrieve it later: approach Furniture and press Action to <b>STASH</b> it. Note that Furniture can hide more than one Item.</li>
-                    <div class="break"></div>
                     <li>The <b>MAP</b> shows in which Rooms Items are located using an X symbol.</li>
                     <li>Depending on game configuration, <b>ARROWS</b> in your Inventory can point to locations of Items.</li>
                     <li>Items can also be lying on the ground, if a Player drops them.</li>
@@ -380,6 +427,7 @@
                 <ul>
                     <li>To counter your opponent's Tricks, you can pick up helpful <b>COUNTERMEASURES</b> from around the Castle. See Tricks section below for details.</li>
                 </ul>
+                <div class="spacer" style="height: 20px; page-break-before: always;"></div>
                 <h3>Confrontation</h3>
                 <ul>
                     <li>Inevitably you will run into your opponent as you perform your mission, in which case a <b>MARTIAL FIGHT</b> is inevitable. See Battle section below for details.</li>
@@ -397,6 +445,8 @@
                 <p></p>
             </td>
         </tr>
+
+        <tr class="print-only"><td><div class="break"></div></td></tr>
 
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
@@ -419,13 +469,14 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title"><p>Castles</p></td>
-            <td class="top-margin-s">
-                <p>
-                    There are four <b>CASTLES</b> and one <b>DOJO</b> available in the game.<br />
-                    Layouts of the Castles remain unchanged but locations of Items, Furniture, Doors as well as overall decoration is <b>RANDOMISED</b> each round.
+            <td class="top-margin-s" style="padding-bottom: 0;">
+                <p style="padding-bottom: 0;">
+                    There are four <b>CASTLES</b> and one <b>DOJO</b> available in the game. Layouts of the Castles remain unchanged but locations of Items, Furniture, Doors as well as overall decoration is <b>RANDOMISED</b> each round.
                 </p>
             </td>
         </tr>
@@ -439,8 +490,7 @@
                     A small Dojo for practice.
                 </p>
                 <ul>
-                    <li>Floors: 2</li>
-                    <li>Rooms: 10</li>
+                    <li><span style="width: 100px; display: inline-block;">Floors: 2</span><span style="width: 100px; display: inline-block;">Rooms: 10</span></li>
                 </ul>
             </td>
         </tr>
@@ -454,8 +504,7 @@
                     The original Tsuruga castle is located in Aizuwakamatsu City in Fukushima prefecture and is famous for being a stronghold of the Tokugawa shogunate and its siege in 1868.
                 </p>
                 <ul>
-                    <li>Floors: 5</li>
-                    <li>Rooms: 17</li>
+                    <li><span style="width: 100px; display: inline-block;">Floors: 5</span><span style="width: 100px; display: inline-block;">Rooms: 17</span></li>
                 </ul>
             </td>
         </tr>
@@ -472,8 +521,7 @@
                     It has the nickname Crow Castle due to its black exterior.
                 </p>
                 <ul>
-                    <li>Floors: 6</li>
-                    <li>Rooms: 23</li>
+                    <li><span style="width: 100px; display: inline-block;">Floors: 6</span><span style="width: 100px; display: inline-block;">Rooms: 23</span></li>
                 </ul>
             </td>
         </tr>
@@ -488,8 +536,7 @@
                     The original Edo castle was located in central Tokyo and served as headquarters of the Tokugawa shogunate but it has been destroyed by fire in 1873. The Imperial Palace has been rebuilt in its place at a much smaller scale.
                 </p>
                 <ul>
-                    <li>Floors: 2</li>
-                    <li>Rooms: 20</li>
+                    <li><span style="width: 100px; display: inline-block;">Floors: 2</span><span style="width: 100px; display: inline-block;">Rooms: 20</span></li>
                 </ul>
             </td>
         </tr>
@@ -504,12 +551,13 @@
                     The original Azuchi castle was located in Shiga prefecture and served Oda Nobunaga. It only operated for a few years before being destroyed in the sixteenth century, but was pivotal to development of castles in Japan.
                 </p>
                 <ul>
-                    <li>Floors: 3</li>
-                    <li>Rooms: 16</li>
+                    <li><span style="width: 100px; display: inline-block;">Floors: 3</span><span style="width: 100px; display: inline-block;">Rooms: 16</span></li>
                 </ul>
                 <p></p>
             </td>
         </tr>
+
+        <tr class="print-only"><td><div class="break"></div></td></tr>
 
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
@@ -521,9 +569,10 @@
                     Your Shinobi has an arsenal of <b>TRICKS</b> they can use to slow down their opponent.<br />
                     Some Tricks can be set up on <b>FURNITURE</b>, some on <b>DOORS</b>, and some can be placed on the <b>FLOOR</b>.<br />
                     Most Tricks have a <b>COUNTERMEASURE</b> you can use to avoid them.<br />
-                    To setup a Trick, enter <b>INVENTORY</b> using the <b>ACTION</b> button (when standing in an open spot) and select it.<br />
+                    To setup a Trick, enter <b>INVENTORY</b> using the <b>ACTION</b> or <b>QUICK INVENTORY</b> buttons and select it.<br />
                     You <b>CANNOT</b> setup a Trick or pick up a Countermeasure while you're <b>CARRYING</b> an Item; drop the Item on the floor first.
                 </p>
+                <p></p>
             </td>
         </tr>
         <tr>
@@ -602,6 +651,7 @@
                 <p></p>
             </td>
         </tr>
+        <tr class="print-only"><td><div class="break"></div></td></tr>
         <tr>
             <td class="title">
                 <h5>Yokai</h5>
@@ -664,6 +714,8 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title">
@@ -675,7 +727,7 @@
                 </p>
                 <ul>
                     <li><b>MOVE</b> in front of your opponent, facing them.</li>
-                    <li>Press and <b>HOLD Action</b> button to prepare for a martial move.</li>
+                    <li>Press and <b>HOLD ACTION</b> button to prepare for a martial move.</li>
                     <li>
                         While holding Action, <b>PRESS A DIRECTION</b> to perform a move:
                         <ul>
@@ -712,6 +764,8 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title">
@@ -733,7 +787,6 @@
                 <p>
                     Ranks are awarded every 50 points, the <b>TOP RANK</b> requires 200 points.
                 </p>
-                <p></p>
             </td>
         </tr>
 
@@ -744,7 +797,7 @@
             </td>
             <td class="top-margin-s">
                 <p>
-                    When setting up a game, you can control a few of its rules.<br />
+                    When setting up a game, you can control a some of its rules.<br />
                     Rules are combined into pre-set Difficulties, but you can also customize each individually.
                 </p>
                 <table class="inner">
@@ -774,10 +827,10 @@
                     <tr>
                         <th>Arrow Guides</th>
                         <td>
-                            Controls arrows in the Inventory:
+                            Controls display of item arrows in the Inventory:
                             <ul>
-                                <li>Always - arrows always show directions to Items</li>
-                                <li>Known Items Only - arrows only show directions to Items the player found and stashed</li>
+                                <li>Always - always show directions to Items</li>
+                                <li>Known Items Only - only show directions to Items player stashed themself</li>
                                 <li>Never - no arrows, Items can be located only through the Map</li>
                             </ul>
                         </td>
@@ -787,7 +840,6 @@
                         <td>Controls whether the other Player is shown on the Map</td>
                     </tr>
                 </table>
-                <p></p>
             </td>
         </tr>
 
@@ -801,13 +853,35 @@
             <td class="title">
                 <p>Options</p>
             </td>
-            <td>
-                <p></p>
+            <td class="top-margin-s">
+                <p>
+                    You can configure certain components of the game's gameplay, display and audio using the Options menu.<br />
+                </p>
                 <table class="inner">
                     <colgroup>
                         <col style="width: 25%;" />
                         <col style="width: 75%;" />
                     </colgroup>
+                    <tr>
+                        <th>Single Button Mode</th>
+                        <td>By default pressing Action enters Inventory if no other action is possible<br />This allows playing using only a single action key/button (joystick-style)</td>
+                    </tr>
+                    <tr>
+                        <th>Action Highlight</th>
+                        <td>Toggles flat colour highlight of Doors and Furniture when placing Traps or stashing Items</td>
+                    </tr>
+                    <tr>
+                        <th>Camera View</th>
+                        <td>Toggle between floating and stationary camera (reduces 3D effect)</td>
+                    </tr>
+                    <tr>
+                        <th>Movement</th>
+                        <td>Toggles between smooth (modern) and animation-aligned player movement (reminiscent of old games)</td>
+                    </tr>
+                    <tr>
+                        <th>Steam IDs</th>
+                        <td>Hides your Steam username and ID for privacy (streamer mode)</td>
+                    </tr>
                     <tr>
                         <th>Full Screen</th>
                         <td>Toggle between full-screen and windowed modes</td>
@@ -817,20 +891,8 @@
                         <td>Apply a retro-style screen effect</td>
                     </tr>
                     <tr>
-                        <th>Camera</th>
-                        <td>Toggle between floating and stationary camera (reduces 3D effect)</td>
-                    </tr>
-                    <tr>
-                        <th>Movement</th>
-                        <td>Toggles between smooth (modern) and animation-aligned player movement (reminiscent of old games)</td>
-                    </tr>
-                    <tr>
-                        <th>Highlight</th>
-                        <td>Toggles flat colour highlight of Doors and Furniture when placing Traps or stashing Items</td>
-                    </tr>
-                    <tr>
-                        <th>Steam IDs</th>
-                        <td>Hides your Steam username and ID for privacy</td>
+                        <th>V-Sync</th>
+                        <td>Toggles GPU sync to monitor's refresh rate</td>
                     </tr>
                     <tr>
                         <th>Music</th>
@@ -840,14 +902,12 @@
                         <th>Volume</th>
                         <td>Game volume on a scale from 0 to 10</td>
                     </tr>
-                    <tr>
-                        <th>V-Sync</th>
-                        <td>Toggles GPU sync to monitor's refresh rate</td>
-                    </tr>
                 </table>
                 <p></p>
             </td>
         </tr>
+
+        <tr class="print-only"><td><div class="break"></div></td></tr>
 
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
@@ -910,6 +970,8 @@
             </td>
         </tr>
 
+        <tr class="print-only"><td><div class="break"></div></td></tr>
+
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
             <td class="title">
@@ -917,7 +979,15 @@
             </td>
             <td class="top-margin-s">
                 <p>Escape From Castle Matsumoto is a passion project of Mausimus (coding) and Joker (art, music).</p>
-                <p>The game is free for everyone to enjoy.</p>
+                <p>The game is <b>FREE</b> for everyone to enjoy.</p>
+                <p>Original release date: <b>5th December 2024</b></p>
+                <ul>
+                    <li><a href="https://store.steampowered.com/app/2490030" target="_blank">Steam page</a></li>
+                    <li><a href="https://mausimus.itch.io/efcm" target="_blank">itch.io page</a></li>
+                    <li><a href="https://mausimus.github.io/efcm/MANUAL.html" target="_blank">Manual (HTML)</a></li>
+                    <li><a href="https://mausimus.github.io/efcm/MANUAL.pdf" target="_blank">Manual (PDF)</a></li>
+                </ul>
+                <p></p>
                 <p>
                     We have used some external assets:
                 </p>
@@ -937,11 +1007,11 @@
                 <p></p>
             </td>
         </tr>
-
+        <tr class="spacer"><td style="height: 130px;"></td></tr>
         <tr><td class="separator" colspan="2"></td></tr>
         <tr>
-            <td colspan="2" style="text-align: right;">
-                <p style="font-size: 12px;">&copy; 2024 Mausimus. All Rights Reserved.</p>
+            <td colspan="2" style="text-align: left;">
+                <p style="font-size: 12px;">&copy; 2024-2025 Mausimus. All Rights Reserved. v1.02</p>
             </td>
         </tr>
 
