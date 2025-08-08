@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>ShaderGlass Manual v1.1</title>
+    <title>ShaderGlass Manual v1.2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 </head>
@@ -10,14 +10,14 @@
         <h2 id="shaderglass">ShaderGlass v1.2</h2>
         <p>Overlay for running GPU shaders on top of Windows desktop</p>
         <p style="font-size: 12px;">
-            Copyright (c) 2021-2025 mausimus (<a href="https://mausimus.net">mausimus.net</a>)<br />
+            Copyright (c) 2021-2025 mausimus (<a href="https://mausimus.net" target="_blank">mausimus.net</a>)<br />
             Distributed under GNU General Public License v3.0
         </p>
         <p>&nbsp;</p>
         <h3 id="features">Features</h3>
         <ul>
             <li>applies shader effects on top of desktop, in a floating window or full-screen</li>
-            <li>built-in <a href="https://github.com/libretro/RetroArch">RetroArch</a> shader library (1200+ shaders!) covering:</li>
+            <li>built-in <a href="https://github.com/libretro/RetroArch" target="_blank">RetroArch</a> shader library (1200+ shaders!) covering:</li>
             <ul>
                 <li>CRT monitor simulation</li>
                 <li>image upscaling</li>
@@ -27,8 +27,8 @@
             <li>works with most emulators, retro platforms and pixel art editors including:</li>
             <ul>
                 <li>
-                    <a href="https://www.dosbox.com/">DOSBox</a>, <a href="https://github.com/FrodeSolheim/fs-uae">FS-UAE</a>, <a href="http://www.virtualdub.org/altirra.html">Altirra</a>,
-                    <a href="https://github.com/scummvm/scummvm">ScummVM</a>, <a href="https://github.com/adventuregamestudio/ags">AGS</a>, <a href="https://sf.net/projects/vice-emu">VICE</a>, <a href="https://www.aseprite.org/">Aseprite</a> etc.
+                    <a href="https://www.dosbox.com/" target="_blank">DOSBox</a>, <a href="https://github.com/FrodeSolheim/fs-uae" target="_blank">FS-UAE</a>, <a href="http://www.virtualdub.org/altirra.html" target="_blank">Altirra</a>,
+                    <a href="https://github.com/scummvm/scummvm" target="_blank">ScummVM</a>, <a href="https://github.com/adventuregamestudio/ags" target="_blank">AGS</a>, <a href="https://sf.net/projects/vice-emu" target="_blank">VICE</a>, <a href="https://www.aseprite.org/" target="_blank">Aseprite</a> etc.
                 </li>
             </ul>
             <li>excellent companion for pixel art showing shaded and/or aspect-ratio corrected preview</li>
@@ -40,9 +40,9 @@
         </ul>
         <p><br /></p>
         <h3 id="download">Download</h3>
-        <p>GitHub: <a href="https://github.com/mausimus/ShaderGlass">https://github.com/mausimus/ShaderGlass</a></p>
-        <p>Itch: <a href="https://mausimus.itch.io/shaderglass">https://mausimus.itch.io/shaderglass</a></p>
-        <p>Steam: <a href="https://store.steampowered.com/app/3613770/ShaderGlass/">https://store.steampowered.com/app/3613770/ShaderGlass/</a></p>
+        <p>GitHub: <a href="https://github.com/mausimus/ShaderGlass" target="_blank">https://github.com/mausimus/ShaderGlass</a></p>
+        <p>Itch: <a href="https://mausimus.itch.io/shaderglass" target="_blank">https://mausimus.itch.io/shaderglass</a></p>
+        <p>Steam: <a href="https://store.steampowered.com/app/3613770/ShaderGlass/" target="_blank">https://store.steampowered.com/app/3613770/ShaderGlass/</a></p>
         <p><br /></p>
         <h3 id="requirements">Requirements</h3>
         <ul>
@@ -218,7 +218,7 @@
         <h2 id="parameters">Importing Custom Shaders</h2>
         <p>
             ShaderGlass comes with a large built-in library of shaders, but you can also import custom ones
-            written in <a href="https://github.com/libretro/slang-shaders/blob/master/README.md">RetroArch shader system</a>.
+            written in <a href="https://github.com/libretro/slang-shaders/blob/master/README.md" target="_blank">RetroArch shader system</a>.
             It accepts both individual shaders (<i>.slang</i>) and multi-pass presets (<i>.slangp</i>).
         </p>
         <p>
@@ -237,7 +237,7 @@
             ShaderGlass lets you easily experiment with your own shaders! <i>CustomShader.slang</i> is a minimal example
             of a shader that swaps color channels and applies a boost, meant as an example from which you could
             start writing your own shaders and have them applied to your desktop. Check out
-            <a href="https://github.com/libretro/slang-shaders">RetroArch shader repository</a> for tons of examples.
+            <a href="https://github.com/libretro/slang-shaders" target="_blank">RetroArch shader repository</a> for tons of examples.
         </p>
 
         <h3>Modifying RetroArch shaders</h3>
@@ -277,7 +277,7 @@
         <h3 id="-i-dont-see-my-favourite-retroarch-shader">&gt; I don't see my favourite RetroArch shader</h3>
         <p>
             ShaderGlass includes majority of RetroArch repository at time of release, but some shaders had to be excluded because of features SG doesn't yet support.
-            Differences versus upstream RetroArch shader repository are tracked <a href="https://github.com/mausimus/slang-shaders/pull/1">in this PR</a>.
+            Differences versus upstream RetroArch shader repository are tracked <a href="https://github.com/mausimus/slang-shaders/pull/1" target="_blank">in this PR</a>.
         </p>
         <h3 id="-shaderglass-cant-capture-some-windows" style="page-break-before: always;">&gt; ShaderGlass can't capture some windows</h3>
         <p>Unfortunately some old-style rendering windows are not supported by modern Windows Capture API. Please use Desktop mode to capture those.</p>
@@ -296,7 +296,7 @@
                 <li>
                     Use a Virtual Display - install an open-source virtual monitor driver and run the game on there; then in ShaderGlass use Display Clone mode to see the game with mouse cursor properly captured:
                     <ol>
-                        <li>Download and install <a href="https://github.com/VirtualDrivers/Virtual-Display-Driver">Virtual Display Driver</a></li>
+                        <li>Download and install <a href="https://github.com/VirtualDrivers/Virtual-Display-Driver" target="_blank">Virtual Display Driver</a></li>
                         <li>Configure the virtual display to the same resolution and refresh rate as your main display using Windows Display Settings</li>
                         <li>Start up your game in borderless fullscreen and use Win+Shift+Arrow keys to position it on the virtual display</li>
                         <li>Set Input -> Desktop to the virtual display in ShaderGlass</li>
@@ -311,14 +311,14 @@
         </p>
         <h3 id="-mouse-cursor">&gt; A different issue...</h3>
         <p>
-            Check <a href="https://github.com/mausimus/ShaderGlass/issues?q=is%3Aissue">Issues section on GitHub</a> for known problems and workarounds.
+            Check <a href="https://github.com/mausimus/ShaderGlass/issues?q=is%3Aissue" target="_blank">Issues section on GitHub</a> for known problems and workarounds.
         <p><br /></p>
         <h2 id="notices">Notices</h2>
         <ul>
-            <li><p>ShaderGlass application is provided under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a></p></li>
+            <li><p>ShaderGlass application is provided under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License v3.0</a></p></li>
             <li>
                 <p>
-                    Includes precompiled shaders from <a href="https://github.com/libretro/slang-shaders">libretro/RetroArch shader repository</a>.<br />
+                    Includes precompiled shaders from <a href="https://github.com/libretro/slang-shaders" target="_blank">libretro/RetroArch shader repository</a>.<br />
                     Please refer to copyright notes within shader code for detailed copyright and license information about each shader.
                 </p>
             </li>
@@ -358,7 +358,7 @@
             font-feature-settings: "kern" 1;
             font-kerning: normal;
             padding: 30px;
-            max-width: 1000px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
