@@ -37,6 +37,10 @@
             margin: 0 auto;
         }
 
+        img.hidden {
+            filter: brightness(0%);
+        }
+
         table {
             width: 900px;
             margin: 0 auto;
@@ -74,7 +78,7 @@
     </tr>
     <tr>
         <td>
-            <img src="portraits/jacek.png">
+            <img src="portraits/jacek.png" class="hidden">
             <div class="name">
             <span class="hidden">Jacek</span></br>
             <span class="hidden">Du&#353;ek</span>
@@ -92,7 +96,7 @@
     </tr>
     <tr>
         <td>
-            <img src="portraits/elsa.png">
+            <img src="portraits/elsa.png" class="hidden">
             <div class="name">
             <span class="hidden">Elsa</span></br>
             <span class="hidden">Ziegler</span>
@@ -109,7 +113,7 @@
     </tr>
     <tr>
         <td>
-            <img src="portraits/leon.png">
+            <img src="portraits/leon.png" class="hidden">
             <div class="name">
             <span class="hidden">Leon</span></br>
             <span class="hidden">Brotz</span>
@@ -124,7 +128,7 @@
     </tr>
     <tr>
         <td>
-            <img src="portraits/lorenz.png">
+            <img src="portraits/lorenz.png" class="hidden">
             <div class="name">
             <span class="hidden">Lorenz</span></br>
             <span class="hidden">Gr&#246;del</span>
@@ -140,7 +144,7 @@
     </tr>
     <tr>
         <td>
-            <img src="portraits/matej.png">
+            <img src="portraits/matej.png" class="hidden">
             <div class="name">
             <span class="hidden">Mat&#283;j</span></br>
             <span class="hidden">Koz&#225;r</span>
@@ -162,6 +166,13 @@
 <script type="text/javascript">
         window.onload = function() {
         var anchors = document.getElementsByTagName('span');
+        for(var i = 0; i < anchors.length; i++) {
+            var anchor = anchors[i];
+            anchor.onclick = function() {
+                this.classList.remove("hidden");
+            }
+        }
+        var anchors = document.getElementsByTagName('img');
         for(var i = 0; i < anchors.length; i++) {
             var anchor = anchors[i];
             anchor.onclick = function() {
