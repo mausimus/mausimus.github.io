@@ -11,7 +11,47 @@
 
         .hidden {
             background-color: black;
+            color: black;
             cursor: pointer;
+        }
+
+        .hidden-f {
+            color: #aa00aa !important;
+            cursor: pointer;
+        }
+
+        .hidden-c {
+            color: #00aaaa !important;
+            cursor: pointer;
+        }
+
+        .hidden-b {
+            color: #aa5500 !important;
+            cursor: pointer;
+        }
+
+        .clue-f {
+            background-color: #aa00aa;
+            color: #ffff55;
+        }
+
+        .clue-c {
+            background-color: #00aaaa;
+            color: #ffff55;
+        }
+
+        .clue-b {
+            background-color: #aa5500;
+            color: #ffff55;
+        }
+
+        .solution {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            line-height: 16pt;
+            color: #aaaaaa;
+            background-color: #555555;
+            padding-left: 32px;
         }
 
         td {
@@ -185,6 +225,32 @@
                 <ul><span class="hidden">Leaves just the hush money in the safe as a taunt for Lorenz</span></ul>
             </td>
         </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; padding: 5px;">
+                <h2 style="margin: 0; padding: 0;">Solution</h2>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="solution">
+                <p>
+  <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Mat&#283;j&nbsp;&nbsp;&nbsp;</span> and <span class="clue-f hidden-f">&nbsp;&nbsp;Lorenz&nbsp;&nbsp;&nbsp;</span> used to be <span class="clue-c hidden-c">&nbsp;partners&nbsp;&nbsp;</span> until <span class="clue-f hidden-f">&nbsp;&nbsp;Lorenz&nbsp;&nbsp;&nbsp;</span><br/>
+  cheated. <span class="clue-f hidden-f">&nbsp;&nbsp;Lorenz&nbsp;&nbsp;&nbsp;</span> tried to <span class="clue-b hidden-b">&nbsp;&nbsp;&nbsp;give&nbsp;&nbsp;&nbsp;&nbsp;</span> them <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;money&nbsp;&nbsp;&nbsp;</span> to settle.</p>
+  <p>
+  <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Mat&#283;j&nbsp;&nbsp;&nbsp;</span> spotted an opportunity for <span class="clue-c hidden-c">&nbsp;&nbsp;revenge&nbsp;&nbsp;</span> and tasked <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Jacek&nbsp;&nbsp;&nbsp;</span><br/>
+  with arranging a <span class="clue-c hidden-c">&nbsp;&nbsp;robbery&nbsp;&nbsp;</span> to get <span class="clue-b hidden-b">&nbsp;&nbsp;stolen&nbsp;&nbsp;&nbsp;</span> <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;money&nbsp;&nbsp;&nbsp;</span> back.</p>
+  <p>
+  The <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;alarm&nbsp;&nbsp;&nbsp;</span> was disabled using a <span class="clue-c hidden-c">&nbsp;&nbsp;passkey&nbsp;&nbsp;</span> <span class="clue-b hidden-b">&nbsp;&nbsp;stolen&nbsp;&nbsp;&nbsp;</span> by <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Elsa&nbsp;&nbsp;&nbsp;&nbsp;</span><br/>
+  from <span class="clue-f hidden-f">&nbsp;Heinrich&nbsp;&nbsp;</span>, concealed in a <span class="clue-c hidden-c">&nbsp;necklace&nbsp;&nbsp;</span> and handed to <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Jacek&nbsp;&nbsp;&nbsp;</span>.</p>
+  <p>
+  <span class="clue-f hidden-f">&nbsp;&nbsp;Lorenz&nbsp;&nbsp;&nbsp;</span> unknowingly <span class="clue-b hidden-b">&nbsp;&nbsp;&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;</span> the <span class="clue-c hidden-c">fingerprint</span> on the <span class="clue-c hidden-c">&nbsp;necklace&nbsp;&nbsp;</span><br/>
+  during the <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;date&nbsp;&nbsp;&nbsp;&nbsp;</span> with <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Elsa&nbsp;&nbsp;&nbsp;&nbsp;</span> thinking they'd be <span class="clue-c hidden-c">&nbsp;&nbsp;lovers&nbsp;&nbsp;&nbsp;</span>.</p>
+  <p>
+  The <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;safe&nbsp;&nbsp;&nbsp;&nbsp;</span> was <span class="clue-b hidden-b">&nbsp;&nbsp;&nbsp;&nbsp;cut&nbsp;&nbsp;&nbsp;&nbsp;</span> into by <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Jacek&nbsp;&nbsp;&nbsp;</span> and <span class="clue-b hidden-b">&nbsp;&nbsp;opened&nbsp;&nbsp;&nbsp;</span> by<br/>
+  <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Mat&#283;j&nbsp;&nbsp;&nbsp;</span>. <span class="clue-f hidden-f">&nbsp;&nbsp;&nbsp;Mat&#283;j&nbsp;&nbsp;&nbsp;</span> <span class="clue-b hidden-b">&nbsp;&nbsp;&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;</span> the <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;money&nbsp;&nbsp;&nbsp;</span> in the <span class="clue-c hidden-c">&nbsp;&nbsp;&nbsp;safe&nbsp;&nbsp;&nbsp;&nbsp;</span><br/>
+  to mark his <span class="clue-c hidden-c">&nbsp;&nbsp;revenge&nbsp;&nbsp;</span>, and <span class="clue-b hidden-b">&nbsp;&nbsp;&nbsp;left&nbsp;&nbsp;&nbsp;&nbsp;</span> the <span class="clue-c hidden-c">&nbsp;&nbsp;passkey&nbsp;&nbsp;</span> to frame<br/>
+  <span class="clue-f hidden-f">&nbsp;&nbsp;Lorenz&nbsp;&nbsp;&nbsp;</span> into the <span class="clue-c hidden-c">&nbsp;&nbsp;robbery&nbsp;&nbsp;</span>.</p>
+            </td>
+        </tr>
     </table>
 </body>
 
@@ -195,6 +261,9 @@
             var anchor = anchors[i];
             anchor.onclick = function () {
                 this.classList.remove("hidden");
+                this.classList.remove("hidden-f");
+                this.classList.remove("hidden-b");
+                this.classList.remove("hidden-c");
             }
         }
         var anchors = document.getElementsByTagName('li');
