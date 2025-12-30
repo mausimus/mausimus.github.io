@@ -41,6 +41,50 @@
             color: #adbac7;
         }
 
+        .section {
+            width: 800px;
+            margin: 0 auto;
+            overflow: auto;
+
+            p {
+                margin-top: 0;
+            }
+        }
+
+        .links
+        {
+            padding: 0 5px 0 5px;
+        }
+
+        @media (max-width: 965px)
+        {
+            .content {
+                width: 100%;
+                padding: 0px;
+            }
+
+            iframe {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
+            }
+
+            .section {
+                width: 100%;
+
+                p {
+                    margin-top: 5px;
+                }
+            }
+
+            .screenshot {
+                img {
+                    width: 50%;
+                    height: auto;
+                }
+            }
+        }
+
         a {
             color: #cfd8e1;
         }
@@ -90,101 +134,98 @@
         <div style="margin: 20px;">
 
             <h3>Scumm Bar 3D</h3>
-            <div style="width: 800px; margin: 0 auto;">
+            <div class="section">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/uNgz4E8GjYU" title="Scumm Bar in 3D (tech demo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <p>
                     Scumm Bar 3D playable in ScummVM with RVX mod prototype, using voxel projection mapping. Collaboration with <a href="https://twitter.com/foa_se" target="_blank">FOA_SE</a>. VGA and EGA versions.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=uNgz4E8GjYU" title="Scumm Bar 3D Tech Demo (youtube)" target="_blank">VGA Version (YT)</a>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=ixzQJENzl5U" title="Scumm Bar *EGA* 3D Tech Demo (youtube)" target="_blank">EGA Version (YT)</a>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=wNi1KE8G3I0" title="Scumm Bar 3D EXPLAINED (youtube)" target="_blank">Explanation (YT)</a>
-                &nbsp;&nbsp;
-                <a href="https://twitter.com/mausmoto/status/1558076988438761472" title="Scumm Bar 3D Tech Demo (twitter)" target="_blank">twitter (VGA)</a>
-                &nbsp;&nbsp;
-                <a href="https://twitter.com/mausmoto/status/1560785766531616769" title="Scumm Bar *EGA* 3D Tech Demo (twitter)" target="_blank">twitter (EGA)</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/rvx-projector" title="RVX Projector (github)" target="_blank">github</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://www.youtube.com/watch?v=uNgz4E8GjYU" title="Scumm Bar 3D Tech Demo (youtube)" target="_blank">VGA Version (YT)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=ixzQJENzl5U" title="Scumm Bar *EGA* 3D Tech Demo (youtube)" target="_blank">EGA Version (YT)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=wNi1KE8G3I0" title="Scumm Bar 3D EXPLAINED (youtube)" target="_blank">Explanation (YT)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://twitter.com/mausmoto/status/1558076988438761472" title="Scumm Bar 3D Tech Demo (twitter)" target="_blank">twitter (VGA)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://twitter.com/mausmoto/status/1560785766531616769" title="Scumm Bar *EGA* 3D Tech Demo (twitter)" target="_blank">twitter (EGA)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/rvx-projector" title="RVX Projector (github)" target="_blank">github</a>
+                </div>
             </div>
 
             <h3>AGI 3D</h3>
 
-            <div style="width: 800px; margin: 0 auto;">
+            <div class="section">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/IfJmOQcLgB8" title="Sierra-style AGI graphics in 3D (tech demo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <p>
                     Sierra-style AGI graphics but in 3D, voxels w/ custom renderer.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=IfJmOQcLgB8" title="AGI in True 3D Tech Demo (YouTube)" target="_blank">YouTube</a>
-                &nbsp;&nbsp;
-                <a href="https://twitter.com/mausmoto/status/1477511624261275651" title="AGI in True 3D Tech Demo (twitter)" target="_blank">twitter</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/rvx" title="RVX Toolkit (github)" target="_blank">github</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://www.youtube.com/watch?v=IfJmOQcLgB8" title="AGI in True 3D Tech Demo (YouTube)" target="_blank">YouTube</a>
+                    &nbsp;&nbsp;
+                    <a href="https://twitter.com/mausmoto/status/1477511624261275651" title="AGI in True 3D Tech Demo (twitter)" target="_blank">twitter</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/rvx" title="RVX Toolkit (github)" target="_blank">github</a>
+                </div>
             </div>
         </div>
 
         <h2>Games</h2>
         <div style="margin: 20px;">
             <h3>Escape From Castle Matsumoto</h3>
-
-            <div style="width: 800px; margin: 0 auto;">
+            <div class="section">
                 <iframe width="800" height="600" src="https://www.youtube.com/embed/H3PsS55E2FY" title="Escape From Castle Matsumoto Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
                 <p>
                     Classic-inspired heist duel game. Single and multiplayer. Collaboration with Joker from Femo Duo.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://youtu.be/H3PsS55E2FY" title="Escape From Castle Matsumoto Trailer (YouTube)" target="_blank">Trailer (YouTube)</a>
-                &nbsp;&nbsp;
-                <a href="https://store.steampowered.com/app/2490030/Escape_From_Castle_Matsumoto/" title="Escape From Castle Matsumoto (Steam)" target="_blank">Steam</a>
-                &nbsp;&nbsp;
-                <a href="https://mausimus.itch.io/efcm" title="Escape From Castle Matsumoto (itch.io)" target="_blank">itch.io</a>
-                &nbsp;&nbsp;
-                <a href="https://x.com/mausmoto/status/1864489410194194539" title="Escape From Castle Matsumoto (twitter)" target="_blank">twitter</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://youtu.be/H3PsS55E2FY" title="Escape From Castle Matsumoto Trailer (YouTube)" target="_blank">Trailer (YouTube)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://store.steampowered.com/app/2490030/Escape_From_Castle_Matsumoto/" title="Escape From Castle Matsumoto (Steam)" target="_blank">Steam</a>
+                    &nbsp;&nbsp;
+                    <a href="https://mausimus.itch.io/efcm" title="Escape From Castle Matsumoto (itch.io)" target="_blank">itch.io</a>
+                    &nbsp;&nbsp;
+                    <a href="https://x.com/mausmoto/status/1864489410194194539" title="Escape From Castle Matsumoto (twitter)" target="_blank">twitter</a>
+                </div>
             </div>
 
             <h3>Enclosure 3-D</h3>
-
-            <div style="width: 800px; margin: 0 auto;">
+            <div class="section">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/rWgQmUnkmeg" title="Enclosure 3-D Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                 <p>
                     Sierra-style AGI adventure game by Femo Duo Entertainment remastered in 3D. Full game, free to play, cross-platform.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=rWgQmUnkmeg" title="Enclosure 3-D Trailer (YouTube)" target="_blank">Trailer (YouTube)</a>
-                &nbsp;&nbsp;
-                <a href="https://store.steampowered.com/app/2128440/Enclosure_3D/" title="Enclosure 3-D (Steam)" target="_blank">Steam</a>
-                &nbsp;&nbsp;
-                <a href="https://mausimus.itch.io/enclosure3d" title="Enclosure 3-D (itch.io)" target="_blank">itch.io</a>
-                &nbsp;&nbsp;
-                <a href="https://twitter.com/mausmoto/status/1543074002297815040" title="Enclosure 3-D (twitter)" target="_blank">twitter</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://www.youtube.com/watch?v=rWgQmUnkmeg" title="Enclosure 3-D Trailer (YouTube)" target="_blank">Trailer (YouTube)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://store.steampowered.com/app/2128440/Enclosure_3D/" title="Enclosure 3-D (Steam)" target="_blank">Steam</a>
+                    &nbsp;&nbsp;
+                    <a href="https://mausimus.itch.io/enclosure3d" title="Enclosure 3-D (itch.io)" target="_blank">itch.io</a>
+                    &nbsp;&nbsp;
+                    <a href="https://twitter.com/mausmoto/status/1543074002297815040" title="Enclosure 3-D (twitter)" target="_blank">twitter</a>
+                </div>
             </div>
 
             <h3>Quid Pro Quo</h3>
-            <div style="width: 800px; margin: 0 auto;">
-                <a href="https://mausimus.itch.io/quid-pro-quo" title="Quid Pro Quo (itch.io)" target="_blank">
+            <div class="section">
+                <a href="https://mausimus.itch.io/quid-pro-quo" title="Quid Pro Quo (itch.io)" target="_blank" class="screenshot">
                     <img align="left" alt="Quid Pro Quo (itch.io)" width="260" height="135" src="images/quidproq.png">
                 </a>
                 <p>
                     Deduction mini-game in EGA for DOS, made for DOSember Game Jam 2025. Collaboration with Joker from Femo Duo. Open Source.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://mausimus.itch.io/quid-pro-quo" title="Quid Pro Quo (itch.io)" target="_blank">itch.io</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/dos2025" title="Quid Pro Quo (github)" target="_blank">github</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://mausimus.itch.io/quid-pro-quo" title="Quid Pro Quo (itch.io)" target="_blank">itch.io</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/dos2025" title="Quid Pro Quo (github)" target="_blank">github</a>
+                </div>
             </div>
 
             <h3>AIROBICS</h3>
-            <div style="width: 800px; margin: 0 auto;">
-                <a href="https://mausimus.itch.io/airobics" title="AIROBICS (itch.io)" target="_blank">
+            <div class="section">
+                <a href="https://mausimus.itch.io/airobics" title="AIROBICS (itch.io)" target="_blank" class="screenshot">
                     <img align="left" alt="AIROBICS (itch.io)" width="260" height="135" src="images/airobics.png">
                 </a>
                 <p>
@@ -192,18 +233,18 @@
                     Mini-game made in 48 hrs for Ludum Dare 49 game jam, taking 23rd place.
                     Open source.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://mausimus.itch.io/airobics" title="AIROBICS (itch.io)" target="_blank">itch.io</a>
-                &nbsp;&nbsp;
-                <a href="https://ldjam.com/events/ludum-dare/49/airobics" title="AIROBICS (Ludum Dare)" target="_blank">Ludum Dare</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/ld49" title="AIROBICS (github)" target="_blank">github</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://mausimus.itch.io/airobics" title="AIROBICS (itch.io)" target="_blank">itch.io</a>
+                    &nbsp;&nbsp;
+                    <a href="https://ldjam.com/events/ludum-dare/49/airobics" title="AIROBICS (Ludum Dare)" target="_blank">Ludum Dare</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/ld49" title="AIROBICS (github)" target="_blank">github</a>
+                </div>
             </div>
 
             <h3>Miner Rescue</h3>
-            <div style="width: 800px; margin: 0 auto;">
-                <a href="https://mausimus.itch.io/miner-rescue" title="Miner Rescue (itch.io)" target="_blank">
+            <div class="section">
+                <a href="https://mausimus.itch.io/miner-rescue" title="Miner Rescue (itch.io)" target="_blank" class="screenshot">
                     <img align="left" alt="Miner Rescue (itch.io)" width="260" height="150" src="images/minerrescue.png">
                 </a>
                 <p>
@@ -211,45 +252,45 @@
                     Mini-game made in 48 hrs for Ludum Dare 48 game jam, 8th place in graphics.
                     Open source.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://mausimus.itch.io/miner-rescue" title="Miner Rescue (itch.io)" target="_blank">itch.io</a>
-                &nbsp;&nbsp;
-                <a href="https://ldjam.com/events/ludum-dare/48/miner-rescue" title="Miner Rescue (Ludum Dare)" target="_blank">Ludum Dare</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/ld48" title="Miner Rescue (github)" target="_blank">github</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://mausimus.itch.io/miner-rescue" title="Miner Rescue (itch.io)" target="_blank">itch.io</a>
+                    &nbsp;&nbsp;
+                    <a href="https://ldjam.com/events/ludum-dare/48/miner-rescue" title="Miner Rescue (Ludum Dare)" target="_blank">Ludum Dare</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/ld48" title="Miner Rescue (github)" target="_blank">github</a>
+                </div>
             </div>
         </div>
 
         <h2>Tools</h2>
         <div style="margin: 20px;">
             <h3>ShaderGlass</h3>
-            <div style="width: 800px; margin: 0 auto;">
+            <div class="section">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/gWOcucS9_mg" title="ShaderGlass (youtube)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <p>
                     Overlay for running GPU shaders on top of Windows desktop. Free and open source.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=gWOcucS9_mg" title="ShaderGlass (YouTube)" target="_blank">Demo (YouTube)</a>
-                &nbsp;&nbsp;
-                <a href="https://store.steampowered.com/app/3613770/ShaderGlass/" title="ShaderGlass (Steam)" target="_blank">Steam</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/ShaderGlass" title="ShaderGlass (github)" target="_blank">github</a>
-                &nbsp;&nbsp;
-                <a href="https://mausimus.itch.io/shaderglass" title="ShaderGlass (itch.io)" target="_blank">itch.io</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://www.youtube.com/watch?v=gWOcucS9_mg" title="ShaderGlass (YouTube)" target="_blank">Demo (YouTube)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://store.steampowered.com/app/3613770/ShaderGlass/" title="ShaderGlass (Steam)" target="_blank">Steam</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/ShaderGlass" title="ShaderGlass (github)" target="_blank">github</a>
+                    &nbsp;&nbsp;
+                    <a href="https://mausimus.itch.io/shaderglass" title="ShaderGlass (itch.io)" target="_blank">itch.io</a>
+                </div>
             </div>
             <h3>ShaderBeam</h3>
-            <div style="width: 800px; margin: 0 auto;">
+            <div class="section">
                 <iframe width="800" height="500" src="https://www.youtube.com/embed/LAbb6RqXdIg" title="ShaderBeam (youtube)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <p>
                     Overlay for running <a href="https://blurbusters.com/crt" target="_blank">Blur Busters' CRT Beam Simulator</a> on top of Windows desktop. Free and open source.
                 </p>
-                &nbsp;&nbsp;
-                <a href="https://www.youtube.com/watch?v=LAbb6RqXdIg" title="ShaderBeam (YouTube)" target="_blank">Demo (YouTube)</a>
-                &nbsp;&nbsp;
-                <a href="https://github.com/mausimus/ShaderBeam" title="ShaderBeam (github)" target="_blank">github</a>
-                <br clear="both" />
+                <div class="links">
+                    <a href="https://www.youtube.com/watch?v=LAbb6RqXdIg" title="ShaderBeam (YouTube)" target="_blank">Demo (YouTube)</a>
+                    &nbsp;&nbsp;
+                    <a href="https://github.com/mausimus/ShaderBeam" title="ShaderBeam (github)" target="_blank">github</a>
+                </div>
             </div>
         </div>
 
