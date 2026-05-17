@@ -2,13 +2,8 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-227123301-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-227123301-1');
-    </script>
+    <script type="module" src="scripts/lite-youtube.min.js"></script>
+    <!--<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>-->
     <meta charset="utf-8" />
     <title>mausimus</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -51,22 +46,57 @@
             }
         }
 
-        .links
-        {
+        .links {
             padding: 0 5px 0 5px;
         }
 
-        @media (max-width: 965px)
-        {
+        .video-embed {
+            width: 800px;
+            height: auto;
+            aspect-ratio: 16/9;
+        }
+
+        .lite-youtube-fallback {
+            aspect-ratio: 16/9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1em;
+            padding: 1em;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-weight: bold;
+        }
+
+            .lite-youtube-fallback::before {
+                display: block;
+                content: '';
+                border: solid transparent;
+                border-width: 2em 0 2em 3em;
+                border-left-color: red;
+            }
+
+            .lite-youtube-fallback:hover::before {
+                border-left-color: #fff;
+            }
+
+            .lite-youtube-fallback:focus {
+                outline: 2px solid red;
+            }
+
+        @media (max-width: 965px) {
             .content {
                 width: 100%;
                 padding: 0px;
             }
 
-            iframe {
+            .video-embed {
                 width: 100%;
-                height: auto;
-                aspect-ratio: 16/9;
             }
 
             .section {
@@ -135,7 +165,11 @@
 
             <h3>Scumm Bar 3D</h3>
             <div class="section">
-                <iframe width="800" height="500" src="https://www.youtube.com/embed/uNgz4E8GjYU" title="Scumm Bar in 3D (tech demo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-embed">
+                    <lite-youtube videoid="uNgz4E8GjYU" videotitle="Scumm Bar in 3D (tech demo)">
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=uNgz4E8GjYU" style="background-image: url(https://i.ytimg.com/vi/uNgz4E8GjYU/hqdefault.jpg);">Watch on YouTube: "Scumm Bar in 3D (tech demo)"</a>
+                    </lite-youtube>
+                </div>
                 <p>
                     Scumm Bar 3D playable in ScummVM with RVX mod prototype, using voxel projection mapping. Collaboration with <a href="https://twitter.com/foa_se" target="_blank">FOA_SE</a>. VGA and EGA versions.
                 </p>
@@ -157,7 +191,11 @@
             <h3>AGI 3D</h3>
 
             <div class="section">
-                <iframe width="800" height="500" src="https://www.youtube.com/embed/IfJmOQcLgB8" title="Sierra-style AGI graphics in 3D (tech demo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-embed">
+                    <lite-youtube videoid="IfJmOQcLgB8" videotitle="Sierra-style AGI graphics in 3D (tech demo)">
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=IfJmOQcLgB8" style="background-image: url(https://i.ytimg.com/vi/IfJmOQcLgB8/hqdefault.jpg);">Watch on YouTube: "Sierra-style AGI graphics in 3D (tech demo)"</a>
+                    </lite-youtube>
+                </div>
                 <p>
                     Sierra-style AGI graphics but in 3D, voxels w/ custom renderer.
                 </p>
@@ -175,7 +213,11 @@
         <div style="margin: 20px;">
             <h3>Escape From Castle Matsumoto</h3>
             <div class="section">
-                <iframe width="800" height="600" src="https://www.youtube.com/embed/H3PsS55E2FY" title="Escape From Castle Matsumoto Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-embed">
+                    <lite-youtube videoid="H3PsS55E2FY" videotitle="Escape From Castle Matsumoto Trailer">
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=H3PsS55E2FY" style="background-image: url(https://i.ytimg.com/vi/H3PsS55E2FY/hqdefault.jpg);">Watch on YouTube: "Escape From Castle Matsumoto Trailer"</a>
+                    </lite-youtube>
+                </div>
                 <p>
                     Classic-inspired heist duel game. Single and multiplayer. Collaboration with Joker from Femo Duo.
                 </p>
@@ -192,8 +234,11 @@
 
             <h3>Enclosure 3-D</h3>
             <div class="section">
-                <iframe width="800" height="500" src="https://www.youtube.com/embed/rWgQmUnkmeg" title="Enclosure 3-D Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                <div class="video-embed">
+                    <lite-youtube videoid="rWgQmUnkmeg" videotitle="Enclosure 3-D Trailer">
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=rWgQmUnkmeg" style="background-image: url(https://i.ytimg.com/vi/rWgQmUnkmeg/hqdefault.jpg);">Watch on YouTube: "Enclosure 3-D Trailer"</a>
+                    </lite-youtube>
+                </div>
                 <p>
                     Sierra-style AGI adventure game by Femo Duo Entertainment remastered in 3D. Full game, free to play, cross-platform.
                 </p>
@@ -266,7 +311,11 @@
         <div style="margin: 20px;">
             <h3>ShaderGlass</h3>
             <div class="section">
-                <iframe width="800" height="500" src="https://www.youtube.com/embed/gWOcucS9_mg" title="ShaderGlass (youtube)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-embed">
+                    <lite-youtube videoid="gWOcucS9_mg" videotitle="ShaderGlass">
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=gWOcucS9_mg" style="background-image: url(https://i.ytimg.com/vi/gWOcucS9_mg/hqdefault.jpg);">Watch on YouTube: "ShaderGlass"</a>
+                    </lite-youtube>
+                </div>
                 <p>
                     Overlay for running GPU shaders on top of Windows desktop. Free and open source.
                 </p>
@@ -282,7 +331,11 @@
             </div>
             <h3>ShaderBeam</h3>
             <div class="section">
-                <iframe width="800" height="500" src="https://www.youtube.com/embed/LAbb6RqXdIg" title="ShaderBeam (youtube)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="video-embed">
+                    <lite-youtube videoid="LAbb6RqXdIg" videotitle="ShaderBeam">
+                        <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=LAbb6RqXdIg" style="background-image: url(https://i.ytimg.com/vi/LAbb6RqXdIg/hqdefault.jpg);">Watch on YouTube: "ShaderBeam"</a>
+                    </lite-youtube>
+                </div>
                 <p>
                     Overlay for running <a href="https://blurbusters.com/crt" target="_blank">Blur Busters' CRT Beam Simulator</a> on top of Windows desktop. Free and open source.
                 </p>
